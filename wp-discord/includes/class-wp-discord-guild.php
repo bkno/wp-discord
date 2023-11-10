@@ -86,7 +86,7 @@ class WP_Discord_Guild
      */
     public function get_channels($type = null)
     {
-        $url = 'https://discordapp.com/api/guilds/' . $this->id . '/channels';
+        $url = 'https://discordapp.com/api/guilds/' . $this->server_id . '/channels';
 
         $response = DiscordApiWrapper::getRequest($url, $this->token);
 
