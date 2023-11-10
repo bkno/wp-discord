@@ -188,7 +188,10 @@ class WP_Discord_Admin
                     $settings_tab->auth_link = 'https://discordapp.com/oauth2/authorize?client_id=' . $settings_tab->client_id . '&scope=bot&permissions=0x20000000';
                     break;
                 case 'settings':
-                    $settings_tab->channels = $this->guild->get_channels(0);
+                    // Just fetch text and announcement channels
+                    // https://discord.com/developers/docs/resources/channel#channel-object-channel-types
+                    $channel_types = array(0, 5);
+                    $settings_tab->channels = $this->guild->get_channels($channel_types);
                     break;
             }
 

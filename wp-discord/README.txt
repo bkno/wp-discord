@@ -2,8 +2,8 @@
 Contributors: rspraymond, psigel
 Tags: discord, chat, widget
 Requires at least: 4.0.0
-Tested up to: 4.9
-Stable tag: 0.4.4
+Tested up to: 6.3.2
+Stable tag: 0.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,15 +25,18 @@ Wordpress plugin to integrate discord into your wordpress sites. Currently suppo
 
 == Screenshots ==
 
-1.  Make sure "Enable Widget" is checked and that a instant invite channel is selected. Copy server id.
+1. Make sure "Enable Widget" is checked and that a instant invite channel is selected. Copy server id.
 2. Configure your widget
 3. Widget Display
 4. Discord Channel Posting Setup.
 
 == Changelog ==
 
+= 0.5.0 =
+* Add support for announcement channels, not just text channels.
+
 = 0.4.4 =
-* Fix depreciation error related to creation of dynamic property
+* Fix depreciation error related to creation of dynamic property.
 
 = 0.4.3 =
 * Add feature to only publish once. (Contributed by https://github.com/CharlyLeetham)

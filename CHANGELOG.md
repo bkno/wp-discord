@@ -1,5 +1,8 @@
 # Changelog
 
+### V0.5.0 - 2023-11-10
+* Add support for announcement channels, not just text channels.
+
 ### V0.4.4 - 2023-11-10
 * Fix depreciation error related to creation of dynamic property.
 

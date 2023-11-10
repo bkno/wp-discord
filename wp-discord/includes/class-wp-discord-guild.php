@@ -84,7 +84,7 @@ class WP_Discord_Guild
      * @since      0.3.0
      * @return array|mixed|object
      */
-    public function get_channels($type = null)
+    public function get_channels($types = null)
     {
         $url = 'https://discordapp.com/api/guilds/' . $this->server_id . '/channels';
 
@@ -96,9 +96,9 @@ class WP_Discord_Guild
 
         $channels = json_decode($response);
 
-        if (!is_null($type)) {
+        if (!is_null($types) && is_array($types)) {
             foreach ($channels as $key => $channel) {
-                if ($channel->type !== $type) {
+                if (!in_array($channel->type, $types)) {
                     unset($channels[$key]);
                 }
             }
