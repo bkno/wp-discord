@@ -24,7 +24,7 @@ class WP_Discord_Guild
 
     public function __construct($server_id, $token)
     {
-        $this->id = $server_id;
+        $this->server_id = $server_id;
         $this->token = $token;
     }
 

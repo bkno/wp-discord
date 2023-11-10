@@ -1,5 +1,8 @@
 # Changelog
 
+### V0.4.4 - 2023-11-10
+* Fix depreciation error related to creation of dynamic property
+
 ### V0.4.3 - 2018-03-08
 * Add feature to only publish once. (Contributed by https://github.com/CharlyLeetham)
 
@@ -16,7 +19,6 @@
 
 ### V0.3.7 - 2017-05-30
 * Validate Snowflake ID fields.
-
 
 ### V0.3.6 - 2017-03-20
 * Delete Plugin options when uninstalling plugin.

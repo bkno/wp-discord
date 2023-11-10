@@ -3,7 +3,7 @@ Contributors: rspraymond, psigel
 Tags: discord, chat, widget
 Requires at least: 4.0.0
 Tested up to: 4.9
-Stable tag: 0.4.3
+Stable tag: 0.4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,6 +32,9 @@ Wordpress plugin to integrate discord into your wordpress sites. Currently suppo
 
 == Changelog ==
 
+= 0.4.4 =
+* Fix depreciation error related to creation of dynamic property
+
 = 0.4.3 =
 * Add feature to only publish once. (Contributed by https://github.com/CharlyLeetham)
 
@@ -48,7 +51,6 @@ Wordpress plugin to integrate discord into your wordpress sites. Currently suppo
 
 = 0.3.7 =
 * Validate Snowflake ID fields.
-
 
 = 0.3.6 =
 * Delete Plugin options when uninstalling plugin.
