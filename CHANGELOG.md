@@ -1,7 +1,7 @@
 # Changelog
 
 ### V0.4.4 - 2023-11-10
-* Fix depreciation error related to creation of dynamic property
+* Fix depreciation error related to creation of dynamic property.
 
 ### V0.4.3 - 2018-03-08
 * Add feature to only publish once. (Contributed by https://github.com/CharlyLeetham)
