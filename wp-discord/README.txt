@@ -3,7 +3,7 @@ Contributors: rspraymond, psigel
 Tags: discord, chat, widget
 Requires at least: 4.0.0
 Tested up to: 6.3.2
-Stable tag: 0.5.0
+Stable tag: 0.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,9 @@ Wordpress plugin to integrate discord into your wordpress sites. Currently suppo
 4. Discord Channel Posting Setup.
 
 == Changelog ==
+
+= 0.6.0 =
+* Display featured image if one is set.
 
 = 0.5.0 =
 * Add support for announcement channels, not just text channels.

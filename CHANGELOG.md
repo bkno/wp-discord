@@ -1,5 +1,8 @@
 # Changelog
 
+### V0.6.0 - 2023-11-11
+* Display featured image if one is set.
+
 ### V0.5.0 - 2023-11-10
 * Add support for announcement channels, not just text channels.
 

@@ -209,13 +209,17 @@ class WP_Discord_Admin
      *
      * @since    0.3.0
      */
-    public function post_published_event($new_status, $old_status, $post)
+    public function post_published_event($post_id, $post, $update, $post_before)
     {
+
+        if ( $post->post_status !== 'publish' || ( $post_before && $post_before->post_status ==='publish' ) || wp_is_post_revision( $post ) ) {
+            return true;
+        }
 
         // Only post to discord when a post switches from unpublished to published.
         $alreadyposted = get_post_meta($post->ID, 'wpdiscord_posted', true);
 
-        if ($old_status == 'publish' || $new_status != 'publish' || $alreadyposted) {
+        if ($alreadyposted) {
             return true;
         }
 
@@ -232,21 +236,30 @@ class WP_Discord_Admin
             $description = $post->post_excerpt;
         }
 
+        $post_embed = array(
+            'title' => $post->post_title,
+            'url' => get_permalink($post),
+            'type' => 'rich',
+            //'timestamp' => date(DATE_ATOM, strtotime($post->post_modified_gmt)),
+            'description' => $description,
+            /*'author' => [
+                'name' => '',
+                'url' => '',
+                'icon_url' => ''
+            ]*/
+        );
+
+        // Check for image
+        if ( has_post_thumbnail( $post ) ) {
+            $image_url = get_the_post_thumbnail_url( $post );
+
+            $post_embed['image'] = array(
+                'url' => $image_url,
+            );
+        }
+
         $content = array(
-            'embeds' => array(
-                array(
-                    'title' => $post->post_title,
-                    'url' => get_permalink($post),
-                    'type' => 'rich',
-                    //'timestamp' => date(DATE_ATOM, strtotime($post->post_modified_gmt)),
-                    'description' => $description,
-                    /*'author' => [
-                        'name' => '',
-                        'url' => '',
-                        'icon_url' => ''
-                    ]*/
-                )
-            )
+            'embeds' => array($post_embed)
         );
 
         $webhook->post_content($content);
