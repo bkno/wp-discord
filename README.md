@@ -6,5 +6,5 @@ Wordpress plugin to integrate discord into your wordpress sites. Currently suppo
 
 
 ## Contributors
-* [Philip McManis](https://github.com/sigel)
-* [Ben Knowles](https://github.com/bkno)
+* [sigel](https://github.com/sigel)
+* [bkno](https://github.com/bkno)
